@@ -1,6 +1,6 @@
 # Factor_Analysis
 
-This R repository analyzes questionnaire data collected from Martin & Doris's (2003) research on the development of a humor measurement scale called the Humor Styles Questionnaire (HSQ). The survey items that were generated to comprise the HSQ were born out of an extensive review on literature about how and why we use humor when interacting with others. There were 32 survey items in total that the reseachers chose to represent what they believed to be four underlying dimensions that describe individual differences in one's style of humor. Those four dimensions were:  
+The primary project in this repository, Humor Factor Analysis, analyzes questionnaire data collected from Martin & Doris's (2003) research on the development of a humor measurement scale called the Humor Styles Questionnaire (HSQ). The survey items that were generated to comprise the HSQ were born out of an extensive review on literature about how and why we use humor when interacting with others. There were 32 survey items in total that the reseachers chose to represent what they believed to be four underlying dimensions that describe individual differences in one's style of humor. Those four dimensions were:  
 
 1) Affiliative humor: use of humor to facilitate relationships with others and to put others at ease 
 2) Self-enhancing humor: one's ability to use humor to protect oneself against stress and adversity 
