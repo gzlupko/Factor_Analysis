@@ -37,4 +37,21 @@ sample_EFA_cor <- cor(scale, use = "pairwise.complete.obs")
 EFA_model <- fa(scale, nfactors = 4) 
 EFA_model$loadings
 
+# test numeric exported data set 
 
+
+scale1 <- read_csv("numeric_1.csv") 
+View(scale1) 
+
+
+scale1 <- scale1[3:10 , 18:50]
+scale1 <- sapply(scale1, as.numeric) 
+scale1 <- scale[ , 3:50]
+
+View(scale1)
+
+
+# test EFA with numeric survey data output 
+scale1_EFA_cor <- cor(scale1, use = "pairwise.complete.obs") 
+EFA_model1 <- fa(scale1, nfactors = 4) 
+EFA_model1$loadings
