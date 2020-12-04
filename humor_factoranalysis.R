@@ -13,9 +13,6 @@ library(dplyr)
 
 # load data 
 
-getwd()
-setwd("/Users/gianzlupko/Desktop/humor") 
-
 humor <- read_csv("humordata.csv") 
 head(humor) 
 View(humor) 
