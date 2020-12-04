@@ -6,7 +6,7 @@ library(readxl)
 library(openxlsx) 
 library(rio)
 
-sample <- read_excel("sample_responsibility_2.xlsx") 
+sample <- read_excel("responsibility_text_response.xlsx") 
 
 sample <- as.data.frame(sample)
 
@@ -26,7 +26,7 @@ str(scale)
 View(scale) 
 
 
-export(scale, "sample_output.xlsx") 
+#export(scale, "sample_R_output.xlsx") 
 
 
 
