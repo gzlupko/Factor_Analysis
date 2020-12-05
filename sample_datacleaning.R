@@ -75,4 +75,7 @@ results
 summary(results) 
 
 
-# 
+# Reverse code "opposite" items with psych package function 
+#scale1$Q2 <- recode(brand_qual$tired, "1 = 5; 2 = 4; 4 = 2; 5 = 1")
+
+
