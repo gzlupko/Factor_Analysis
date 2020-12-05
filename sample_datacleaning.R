@@ -55,3 +55,24 @@ View(scale1)
 scale1_EFA_cor <- cor(scale1, use = "pairwise.complete.obs") 
 EFA_model1 <- fa(scale1, nfactors = 4) 
 EFA_model1$loadings
+
+
+
+
+
+# load likert package to use for EDA - specifically for item response frequencies 
+
+library(likert) 
+
+response.frequencies(scale1) 
+
+scale_likert <- scale1 %>% mutate_if(is.integer, as.factor) 
+
+scale_likert
+
+results <- scale_likert[ ,1:5 ]
+results 
+summary(results) 
+
+
+# 
