@@ -97,6 +97,7 @@ scree(humor_items_EFA_cor, factors = FALSE)
 # Exploratory Factor Analysis 
 
 humor_EFA_model <- fa(humor_EFA, nfactors = 6) 
+humor_EFA_model
 humor_EFA_model$loadings
 
 
@@ -119,11 +120,23 @@ str(humor_EFA_model$loadings)
 humor_EFA_model$loadings[1:6]
 
 # build grid for factor loadings and color the good loadings 
-# like Aitong's study 
+# for presentation of factor loadings 
 
 
 humor_EFA_model$loadings
+humor_EFA_model$uniquenesses
 
-humor_EFA_model
+humor_EFA_model$loadings 
+
+
+# check other numbers of factors with EFA 
+# how many valid factors do we have? 
+
+
+fa(humor_items, nfactors = 32, rotate = "oblimin") 
+fa(humor_items, nfactors = 6, rotate = "oblimin") 
+fa(humor_items, nfactors = 5, rotate = "oblimin") 
+
+str(humor_items) 
 
 
