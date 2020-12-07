@@ -94,6 +94,16 @@ scree(humor_items_EFA_cor, factors = FALSE)
 
 
 
+
+
+# use parallel analysis scree plot 
+# psych prints out suggested number of factors = 6 and number of components = 2 
+
+fa.parallel(humor_items) 
+
+
+
+
 # Exploratory Factor Analysis 
 
 humor_EFA_model <- fa(humor_EFA, nfactors = 6) 
