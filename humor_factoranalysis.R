@@ -155,6 +155,26 @@ humor_EFA_model$chi
 
 
 # item refinement 
+# evaluate primary item loadings 
+
+humor_EFA_model$loadings
+
+# check eigenvalues greater than 1
+# a good indication that we have the right number of factors 
+# is if the number of eigenvalues greater than one are equivalent to the factors 
+
+humor_EFA_model$e.values
+
+# shows 7 values above 1 and an 8th eigenvalue that is close to 1
+# which may be measuring something other than the 6 dimensions observed in the scree
+
+
+# factor score correlations 
+# if factor score correlations are too similar this may mean that our 
+# separate dimensions are measuring the same thing 
+# 0.6 is a good indication of whether factors are too correlated 
+
+humor_EFA_model$score.cor
 
 
 
