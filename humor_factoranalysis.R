@@ -147,6 +147,15 @@ fa(humor_items, nfactors = 32, rotate = "oblimin")
 fa(humor_items, nfactors = 6, rotate = "oblimin") 
 fa(humor_items, nfactors = 5, rotate = "oblimin") 
 
-str(humor_items) 
+# check EFA model fit statistics 
+
+humor_EFA_model$TLI
+humor_EFA_model$RMSEA
+humor_EFA_model$chi
+
+
+# item refinement 
+
+
 
 
