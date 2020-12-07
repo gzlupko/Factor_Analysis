@@ -179,3 +179,13 @@ humor_EFA_model$score.cor
 
 
 
+# look for items to drop 
+# ideally, each survey item only loads onto one factor; this is called the primary loading 
+# it is ok for an item to load onto additional factors so long as the secondary loadings are below 0.4 
+# if an item does not load seriously onto any one factor then the item does not clearly reflect any dimension of the construct 
+
+humor_EFA_model$loadings
+# Q3 may be a candidate to drop as it does not seem to load seriously onto one factor 
+# Q6 may also be a candidate as the primary loading is poor 
+
+
