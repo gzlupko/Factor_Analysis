@@ -186,6 +186,87 @@ humor_EFA_model$score.cor
 
 humor_EFA_model$loadings
 # Q3 may be a candidate to drop as it does not seem to load seriously onto one factor 
-# Q6 may also be a candidate as the primary loading is poor 
+# Q6 may also be a candidate as the primary loading is poor also Q28 
+
+# drop item 6 to start and compare EFA models with same number of factors 
+# also update naming convention for new objects to reflect number of items remaining in edited data sets 
+
+humor_items_31 <- humor_items %>%
+  select(-Q6) 
+
+humor_items_31_a <- humor_items %>%
+  select(-Q28) 
+
+humor_EFA_31_a <- fa(humor_items_31_a, nfactors = 6) 
+
+humor_EFA_31 <- fa(humor_items_31, nfactors = 6) 
+humor_EFA_31$loadings
+humor_EFA_model$loadings 
+
+humor_EFA_model$loadings
+
+humor_items_30 <- humor_items_31 %>%
+  select(-Q28) 
+humor_EFA_30 <- fa(humor_items_30, nfactors = 6) 
+
+# compare differences in eigenvalues 
 
 
+humor_EFA_model$e.values
+humor_EFA_31$e.values 
+humor_EFA_31_a$e.values
+humor_EFA_30$e.values
+
+# compare item correlations 
+
+humor_EFA_model$score.cor
+humor_EFA_31$score.cor
+humor_EFA_31_a$score.cor
+humor_EFA_30$score.cor
+
+# compare model fit statistics 
+
+humor_EFA_model$TLI
+humor_EFA_31$TLI
+humor_EFA_31_a$TLI
+humor_EFA_30$TLI
+
+humor_EFA_model$RMSEA
+humor_EFA_31$RMSEA
+humor_EFA_31_a$RMSEA
+humor_EFA_30$RMSEA
+
+humor_EFA_model$chi
+humor_EFA_31$chi
+humor_EFA_31_a$chi 
+humor_EFA_30$chi
+
+
+# so far the humor_EFA_31 had the best fit 
+
+humor_items_30 <- humor_items_31 %>%
+  select(-Q28) 
+humor_EFA_30_new <- fa(humor_items_30, nfactors = 6) 
+humor_EFA_30_new$loadings
+
+humor_items_29 <- humor_items_30 %>%
+  select(-Q19) 
+humor_EFA_29 <- fa(humor_items_29, nfactors = 6) 
+
+humor_EFA_29$loadings
+
+humor_items_28 <- humor_items_29 %>%
+  select(-Q21)
+humor_EFA_28 <- fa(humor_items_28, nfactors = 6) 
+humor_EFA_28$loadings
+
+
+# compare original EFA to 28 item 
+humor_EFA_model$e.values 
+humor_EFA_28$e.values
+humor_EFA_model$TLI
+humor_EFA_28$TLI
+humor_EFA_model$chi
+humor_EFA_28$chi 
+humor_EFA_model$RMSEA
+humor_EFA_28$RMSEA
