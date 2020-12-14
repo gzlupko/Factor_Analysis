@@ -8,14 +8,45 @@ library(rio)
 
 sample <- read_excel("responsibility_text_response.xlsx") 
 
+
 sample <- as.data.frame(sample)
 
-sample[sample == "Strongly disagree"] <- 0
-sample[sample == "Somewhat disagree"] <- 1
-sample[sample == "Neither agree nor disagree"] <- 2
-sample[sample == "Somewhat agree"] <- 3
-sample[sample == "Strongly agree"] <- 4
+# convert text entry items to numeric 
+sample[sample == "Strongly disagree"] <- 1
+sample[sample == "Somewhat disagree"] <- 2
+sample[sample == "Neither agree nor disagree"] <- 3
+sample[sample == "Somewhat agree"] <- 4
+sample[sample == "Strongly agree"] <- 5
 
+
+sample[sample == "Definitely not"] <- 1
+sample[sample == "Probably not"] <- 2
+sample[sample == "Might or might not"] <- 3
+sample[sample == "Probably yes"] <- 4
+sample[sample == "Definitely yes"] <- 5
+
+sample[sample == "Never"] <- 1
+sample[sample == "Sometimes"] <- 2
+sample[sample == "About half the time"] <- 3
+sample[sample == "Most of the time"] <- 4
+sample[sample == "Always"] <- 5
+
+
+sample[sample == "Does not describe me"] <- 1
+sample[sample == "Describes me slightly well"] <- 2
+sample[sample == "Describes me moderately well"] <- 3
+sample[sample == "Describes me very well"] <- 4
+sample[sample == "Describes me extremely well"] <- 5
+
+
+sample[sample == "Disagree strongly"] <- 1
+sample[sample == "Disagree a little"] <- 2
+sample[sample == "Neither agree or disagree"] <- 3
+sample[sample == "Agree a little"] <- 4
+sample[sample == "Agree strongly"] <- 5
+
+
+# remove select fields
 
 sample <- sample[-1, ]
 sample <- sample[ , 1:50]
@@ -77,5 +108,28 @@ summary(results)
 
 # Reverse code "opposite" items with psych package function 
 #scale1$Q2 <- recode(brand_qual$tired, "1 = 5; 2 = 4; 4 = 2; 5 = 1")
+
+# convert data set from list to data frame class 
+sample <- data.frame(matrix(unlist(sample), nrow = length(sample), byrow = T), 
+                     stringsAsFactors = FALSE) 
+
+
+
+# check missing answers for items 
+
+nrow(na.omit(sample)) 
+colSums(is.na(sample)) 
+
+
+
+# item correlations 
+library(corrplot) 
+
+corrplot(cor(scale), method = "circle") 
+
+corr.test(x = scale[ , 1:5])
+
+
+
 
 
