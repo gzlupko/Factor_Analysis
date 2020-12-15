@@ -57,6 +57,12 @@ str(scale)
 View(scale) 
 
 
+
+# reverse code select items 
+
+#keys <- c(1,1,1,1,1,1,-1,1,-1,-1,1,1,1,-1)
+#new_sub_scale <- reverse.code(keys, scale) 
+
 #export(scale, "sample_R_output.xlsx") 
 
 
