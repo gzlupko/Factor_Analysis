@@ -136,6 +136,17 @@ corrplot(cor(scale), method = "circle")
 corr.test(x = scale[ , 1:5])
 
 
+# Multi-trait scaling using psy package's mtmm() function 
+# for assessing convergent and discriminant validity 
+# produces boxpolots of distributions of Pearson correlations between items of subscales 
+
+
+library(psy)
+mtmm(items,list(c("Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", 
+                  "Q11", "Q12", "Q13"),
+                c("Q56", "Q57", "Q58", "Q59", "Q60", "Q98",
+                  "Q103", "Q108", "Q113", "Q118", "Q123", "Q128", "Q133", "Q138")))
+
 
 
 
