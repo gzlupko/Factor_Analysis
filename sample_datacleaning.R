@@ -54,7 +54,7 @@ sample <- sample[ , 1:50]
 scale <- sample[1:5, 1:50]
 scale <- sapply(scale, as.numeric) 
 str(scale)
-View(scale) 
+
 
 
 
