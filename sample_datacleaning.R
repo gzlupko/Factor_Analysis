@@ -150,3 +150,10 @@ mtmm(items,list(c("Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10",
 
 
 
+
+# create data frame for basic item statistics 
+items_avg_values <- sapply(data, mean) 
+items_sd_values <- sapply(data, sd)
+item_stats <- cbind(items_avg_values, items_sd_values) 
+item_stats
+
