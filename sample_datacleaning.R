@@ -157,3 +157,10 @@ items_sd_values <- sapply(data, sd)
 item_stats <- cbind(items_avg_values, items_sd_values) 
 item_stats
 
+
+
+# For convergent and discriminant validity, use scoreItems() from 
+# the psych package
+# using keys argument, scoreItems provides avg scores for each participant 
+# on a scale; you can then run correlation for each participant on two scales
+
