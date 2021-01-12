@@ -158,9 +158,51 @@ item_stats <- cbind(items_avg_values, items_sd_values)
 item_stats
 
 
+# convert column names to lower case 
+names(data) <- tolower(names(data)) 
+
+
+
+
+
 
 # For convergent and discriminant validity, use scoreItems() from 
 # the psych package
 # using keys argument, scoreItems provides avg scores for each participant 
 # on a scale; you can then run correlation for each participant on two scales
+
+
+
+
+# syntax for Lavaan confirmatory factor analysis 
+
+# extract variable names from data set in format separated by addition sign for ease of input to syntax
+names(theory_items)
+paste(names(theory_items), collapse = " + " ) 
+
+
+# create list of models and list of fits to compare future iterations 
+
+
+models <- list()
+fits <- list()
+
+
+models$m1_theory <- ' 
+              dimension1  =~ Q1 + Q2 + Q3 + Q4 + Q5 + Q6 + Q7 + Q8 + Q9 + Q10 + Q11 + Q12 + Q13 + Q14 + Q15 + Q16
+              dimension2 =~ Q17 + Q18 + + Q19 + Q20 + Q21 + Q22 + Q23 + Q24 + Q25
+              dimension3 =~ Q26 + Q27 + Q28 + Q29 + Q30 + Q31 + Q32 + Q33
+              dimension4 =~ Q34 + Q35 + Q36 + Q37 + Q38 + Q39 + Q40 + Q41 + Q42 + Q43 + Q44 + Q45 + Q46 + Q47'
+
+
+fits$m1_theory <- lavaan::cfa(models$m1_theory, data= theory_items)
+
+
+summary(fits$m1_theory, standardized = TRUE, rsquare = TRUE) 
+theory_CFA_loadings <- summary(fits$m1_theory, fit.measures=TRUE) 
+
+
+
+
+
 
