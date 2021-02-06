@@ -15,4 +15,4 @@ The other projects in this repository provide code for data cleaning and factor 
 
 
 
-![alt text](https://github.com/gzlupko/Factor_Analysis/blob/main/scree_humor_EFA.png "Scree Plot of Eigenvalues") 
+![alt text](https://github.com/gzlupko/Factor_Analysis/blob/main/scree_humor_EFA.png =100x20)) 
