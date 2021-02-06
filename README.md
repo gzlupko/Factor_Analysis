@@ -16,3 +16,12 @@ The other projects in this repository provide code for data cleaning and factor 
 
 
 ![alt text](https://github.com/gzlupko/Factor_Analysis/blob/main/scree_humor_EFA.png) 
+
+
+
+![alt text](https://github.com/gzlupko/Factor_Analysis/blob/main/parallel_analysis_scree_humor.png) 
+
+
+
+
+![alt text](https://github.com/gzlupko/Factor_Analysis/blob/main/humor_EFA_diagram.png) 
