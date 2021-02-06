@@ -12,3 +12,7 @@ For this repository, I accessed survey data results from the original study that
 (n = 1,071)
 
 The other projects in this repository provide code for data cleaning and factor analysis of other psychometric scales. 
+
+
+
+![alt text](https://github.com/gzlupko/Factor_Analysis/blob/main/scree_humor_EFA.png "Scree Plot") 
